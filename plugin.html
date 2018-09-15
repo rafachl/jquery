@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exemplo 1</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.fn.legenda=function(){
+                var conteudo=$(this).attr('alt');
+                $("#conteudo").append('<h1>'+conteudo+'</h1');
+
+            }
+
+              $.fn.replacee=function(){
+          
+                var texto = $(this).html();
+            texto = texto.replace(/a/g,'ais');
+            texto = texto.replace(/e/g,'enter');
+            texto = texto.replace(/i/g,'inis');
+            texto = texto.replace(/o/g,'omber');
+            texto = texto.replace(/u/g,'ufter');
+
+
+                $(this).html(texto)
+
+            }
+           $('#img').legenda();       
+           $('#titulo').replacee();        
+ 
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id='titulo'>Exemplo de formulário</h1>
+    <div id="conteudo">
+    <img id="img" src="Capturar.PNG" alt="Smiley face" height="42" width="42">
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo1</title>
+	<style >
+		div{
+			color: #060;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		/*window.onload = function(){
+			document.getElementById('btn-vermelho').onclick = mudarcor;
+		};		
+
+		function mudarcor(){
+			document.getElementById('cor').style.color='#FF00FF';
+		}*/
+		$(document).ready(function() {
+			$('button').click(function() {
+				$('div').eq(1).css('background', '#FF00FF');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1 id="cor">Eduardo Antonio Uliana</h1>
+	<div>Isto é uma DIV</div>
+	<div>Isto é uma DIV</div>
+	<div>Isto é uma DIV</div>
+	<button>Vermelho</button>
+</body>
+</html>

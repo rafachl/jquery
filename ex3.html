@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#dolar-real').click(function(){
+			var resultado = $('#dolar').val();
+			resultado = resultado * 3.71;
+			$('#real').val(resultado);
+		});
+		$('#real-dolar').click(function(){
+			//le o valor do campo 
+			var resultado = $('#dolar').val();
+			resultado = resultado / 3.71;
+			//seta o valor para o campo
+			$('#real').val(resultado);
+		});
+		//adiciona um parágrafo dentro do body no final
+		$('body').append('<p id="paragrafo">Olá Mundo</p>');
+		//altera o html do valor do parágrafo
+		$('#paragrafo').html('Hello World no final do body');
+
+		//adiciona um parágrafo dentro do body no início
+		$('body').prepend('<p id="paragrafo2">Olá Mundo no início do body</p>');
+
+		//adiciona um parágrafo depois do body
+		$('body').after('<p id="paragrafo">Olá Mundo depois do body</p>');
+	});
+</script>
+<body>
+Entrada:<input type="text" id="dolar">
+<button id="dolar-real">Converter para reais</button>
+<button id="real-dolar">Converter para dolares</button><br>
+Saída:<input type="text" id="real"><br><br>
+
+</body>
+</html>
